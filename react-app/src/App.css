@@ -2,37 +2,41 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* FORM COMPONENT */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 0 auto;
+  max-width: 50%;
 }
 
-.App-link {
-  color: #61dafb;
+label{
+  margin-bottom: 2%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input{
+  margin-bottom: 2%;
+  border-radius: 60px;
+  border-bottom: 1px solid gray;
+  padding: 3%;
 }
+
+button{
+  padding: 1.5%;
+  border-radius: 60px;
+  border: none;
+  margin-bottom: 5%;
+  cursor: pointer;
+  background-color: #512b58;
+  color: #f1f3f4;
+}
+
+button:hover{
+  background-color:#f1f3f4;
+  color: #512b58;
+}
+
+
+
+/* PROJECTS COMPONENT */

@@ -27,7 +27,7 @@ export default function Form(props) {
     return (
         <form onSubmit={submitForm}>
             <h2>Add a new project</h2>
-            <div>
+            <div className="input">
                 <label htmlFor="name">Name</label>
                 <input 
                     id="name" 
@@ -37,7 +37,7 @@ export default function Form(props) {
                     name="name"
                     value={project.name}/>
             </div>
-            <div>
+            <div className="input">
                 <label htmlFor="description">Add a description:</label>
                 <input 
                     id="description" 
