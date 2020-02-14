@@ -43,4 +43,45 @@ router.get('/:id/actions', (req,res) => {
         res.status(404).json({ errorMessage: 'This project doesnt exist'});
     })
 })
+
+//POST a new project
+router.post('/', (req, res) => {
+    const { name, description } = req.body;
+    Projects.insert({ name, description })
+    .then( project => {
+        res.status(201).json(project);
+    })
+    .catch( error => {
+        console.log(error);
+        res.status(500).json({ errorMessage: "There was an error adding this post"});
+    })
+})
+
+//PUT request for a specific project
+router.put("/:id", (req, res) => {
+    const { id } = req.params.id;
+    const { name, description } = req.params.body;
+    Projects.update(id, { name, description })
+      .then(project => {
+        res.status(200).json(project);
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json({ error: "There was an error updating this project" });
+      });
+  });
+  
+  //DELETE a project
+  router.delete("/:id", (req, res) => {
+    const { id } = req.params;
+    Projects.remove(id)
+      .then(() => {
+        res.status(204).end();
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json({ error: "Error deleting project." });
+      });
+  });
+  
 module.exports = router;
