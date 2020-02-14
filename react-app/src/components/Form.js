@@ -14,12 +14,12 @@ export default function Form(props) {
     }
 
     const submitForm = e => {
-        e.preventDefault();
+        // e.preventDefault();
         // props.addNewProject(project);
         // setProject({name: '', description:''});
         axios.post('http://localhost:5000/api/projects', project)
             .then( res => {
-                alert('added!!');
+                console.log(res);
             })
             .catch(err => console.log(err));
     }

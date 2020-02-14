@@ -5,7 +5,7 @@ export default function Projects(props) {
     return(
         <div>
             {props.projects.map(project => (
-                <div>
+                <div className="projects">
                     <h3>{project.name}</h3>
                     <p>{project.description}</p>
                 </div>

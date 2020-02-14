@@ -44,9 +44,8 @@ const addNewProject = project => {
 
   return (
     <div className="App">
-
+      <Form addNewProject={addNewProject} name={projects.name} description={projects.description}/> 
       <Projects projects={projects}/>
-      <Form addNewProject={addNewProject} name={projects.name} description={projects.description}/>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+
 }
 
 /* FORM COMPONENT */
@@ -9,6 +10,7 @@
   flex-direction: column;
   margin: 0 auto;
   max-width: 50%;
+  font-size: 3rem;
 }
 
 label{
@@ -39,4 +41,15 @@ button:hover{
 
 
 
-/* PROJECTS COMPONENT */
+/* PROJECTS COMPONENTP */
+.projects{
+  background-color: #f1f3f4;
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 2%;
+  margin-bottom: 4%;
+  border-radius: 50px;
+  -webkit-box-shadow: 13px 15px 38px -6px rgba(110,111,117,1);
+  -moz-box-shadow: 13px 15px 38px -6px rgba(110,111,117,1);
+  box-shadow: 13px 15px 38px -6px rgba(110,111,117,1);
+}
