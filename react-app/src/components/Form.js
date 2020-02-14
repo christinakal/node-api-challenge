@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 export default function Form(props) {
 
@@ -14,9 +15,15 @@ export default function Form(props) {
 
     const submitForm = e => {
         e.preventDefault();
-        props.addNewProject(project);
-        setProject({name: '', description:''});
+        // props.addNewProject(project);
+        // setProject({name: '', description:''});
+        axios.post('http://localhost:5000/api/projects', project)
+            .then( res => {
+                alert('added!!');
+            })
+            .catch(err => console.log(err));
     }
+
     return (
         <form onSubmit={submitForm}>
             <h2>Add a new project</h2>
