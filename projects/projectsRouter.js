@@ -59,8 +59,10 @@ router.post('/', (req, res) => {
 
 //PUT request for a specific project
 router.put("/:id", (req, res) => {
-    const { id } = req.params.id;
-    const { name, description } = req.params.body;
+    
+    const { id } = req.params;
+    const { name, description } = req.body;
+    console.log(id, name, description);
     Projects.update(id, { name, description })
       .then(project => {
         res.status(200).json(project);
@@ -80,7 +82,7 @@ router.put("/:id", (req, res) => {
       })
       .catch(err => {
         console.log(err);
-        res.status(500).json({ error: "Error deleting project." });
+        res.status(500).json({ error: "There was an error deleting project." });
       });
   });
   
