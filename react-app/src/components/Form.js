@@ -26,9 +26,8 @@ export default function Form(props) {
 
     return (
         <form onSubmit={submitForm}>
-            <h2>Add a new project</h2>
             <div className="input">
-                <label htmlFor="name">Name</label>
+                <label htmlFor="name">Project Name</label>
                 <input 
                     id="name" 
                     type="text" 

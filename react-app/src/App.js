@@ -31,17 +31,6 @@ const addNewProject = project => {
 }
 
 
-  // const addNewMember = member => { 
-  //   const newMember = {
-  //     id: Date.now(),
-  //     name: member.name,
-  //     email: member.email,
-  //     role: member.role
-  //   }
-
-  //   setTeamMembers([...teamMembers, newMember]);
-  // }
-
   return (
     <div className="App">
       <Form addNewProject={addNewProject} name={projects.name} description={projects.description}/> 
