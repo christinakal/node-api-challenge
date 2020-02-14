@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import axios from 'axios';
 import Form from './components/Form';
+import Projects from './components/Projects';
 
 function App() {
 
@@ -36,7 +37,8 @@ function App() {
 
   return (
     <div className="App">
-      <Form />
+      <Projects projects={projects}/>
+      <Form name={projects.name} description={projects.description}/>
     </div>
   );
 }
