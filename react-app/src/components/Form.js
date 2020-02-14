@@ -14,17 +14,32 @@ export default function Form(props) {
 
     const submitForm = e => {
         e.preventDefault();
-        // props.add
+        props.addNewProject(project);
+        setProject({name: '', description:''});
     }
     return (
-        <form>
+        <form onSubmit={submitForm}>
+            <h2>Add a new project</h2>
             <div>
                 <label htmlFor="name">Name</label>
-                <input />
+                <input 
+                    id="name" 
+                    type="text" 
+                    placeholder="name" 
+                    onChange={handleChanges}
+                    name="name"
+                    value={project.name}/>
             </div>
             <div>
                 <label htmlFor="description">Add a description:</label>
-                <input />
+                <input 
+                    id="description" 
+                    type="text" 
+                    placeholder="description" 
+                    onChange={handleChanges}
+                    name="description"
+                    value={project.description}
+                />
             </div>
             <button type="submit">Add Project</button>
         </form>

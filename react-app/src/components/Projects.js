@@ -5,7 +5,10 @@ export default function Projects(props) {
     return(
         <div>
             {props.projects.map(project => (
-                <h1>{project.name}</h1>
+                <div>
+                    <h3>{project.name}</h3>
+                    <p>{project.description}</p>
+                </div>
             ))}
         </div>
     );

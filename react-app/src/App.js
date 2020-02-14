@@ -21,7 +21,14 @@ function App() {
   }, projects)
   
 
+const addNewProject = project => {
+  const newProject = {
+    name: project.name,
+    description: project.description
+  }
 
+  setProjects([ ...projects, newProject]);
+}
 
 
   // const addNewMember = member => { 
@@ -37,8 +44,9 @@ function App() {
 
   return (
     <div className="App">
+
       <Projects projects={projects}/>
-      <Form name={projects.name} description={projects.description}/>
+      <Form addNewProject={addNewProject} name={projects.name} description={projects.description}/>
     </div>
   );
 }
