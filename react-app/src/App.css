@@ -1,0 +1,55 @@
+.App {
+  text-align: center;
+
+}
+
+/* FORM COMPONENT */
+
+.input{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 50%;
+  font-size: 3rem;
+}
+
+label{
+  margin-bottom: 2%;
+}
+
+input{
+  margin-bottom: 2%;
+  border-radius: 60px;
+  border-bottom: 1px solid gray;
+  padding: 3%;
+}
+
+button{
+  padding: 1.5%;
+  border-radius: 60px;
+  border: none;
+  margin-bottom: 5%;
+  cursor: pointer;
+  background-color: #512b58;
+  color: #f1f3f4;
+}
+
+button:hover{
+  background-color:#f1f3f4;
+  color: #512b58;
+}
+
+
+
+/* PROJECTS COMPONENTP */
+.projects{
+  background-color: #f1f3f4;
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 2%;
+  margin-bottom: 4%;
+  border-radius: 50px;
+  -webkit-box-shadow: 13px 15px 38px -6px rgba(110,111,117,1);
+  -moz-box-shadow: 13px 15px 38px -6px rgba(110,111,117,1);
+  box-shadow: 13px 15px 38px -6px rgba(110,111,117,1);
+}
